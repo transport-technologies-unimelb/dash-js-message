@@ -64,7 +64,7 @@
         "type": {
           "name": "object"
         },
-        "required": true,
+        "required": false,
         "description": ""
       },
       "setProps": {

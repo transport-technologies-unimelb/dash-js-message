@@ -5,6 +5,7 @@ const DashJSMessageSender = (props) => {
     const {id, target, origin = '*', data} = props;
 
     useEffect(() => {
+        if (data === undefined) return;
         if (!target) {
             window.postMessage(data, origin);
         } else {
@@ -21,7 +22,7 @@ DashJSMessageSender.propTypes = {
     id: PropTypes.string,
     target: PropTypes.string,
     origin: PropTypes.string,
-    data: PropTypes.object.isRequired,
+    data: PropTypes.object,
     setProps: PropTypes.func,
 };
 

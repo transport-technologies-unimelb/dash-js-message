@@ -11,7 +11,7 @@ Keyword arguments:
 
 - id (string; optional)
 
-- data (dict; required)
+- data (dict; optional)
 
 - origin (string; optional)
 
@@ -21,7 +21,7 @@ Keyword arguments:
     _namespace = 'dash_js_message'
     _type = 'DashJSMessageSender'
     @_explicitize_args
-    def __init__(self, id=Component.UNDEFINED, target=Component.UNDEFINED, origin=Component.UNDEFINED, data=Component.REQUIRED, **kwargs):
+    def __init__(self, id=Component.UNDEFINED, target=Component.UNDEFINED, origin=Component.UNDEFINED, data=Component.UNDEFINED, **kwargs):
         self._prop_names = ['id', 'data', 'origin', 'target']
         self._valid_wildcard_attributes =            []
         self.available_properties = ['id', 'data', 'origin', 'target']
@@ -30,10 +30,5 @@ Keyword arguments:
         _locals = locals()
         _locals.update(kwargs)  # For wildcard attrs and excess named props
         args = {k: _locals[k] for k in _explicit_args}
-
-        for k in ['data']:
-            if k not in args:
-                raise TypeError(
-                    'Required argument `' + k + '` was not specified.')
 
         super(DashJSMessageSender, self).__init__(**args)

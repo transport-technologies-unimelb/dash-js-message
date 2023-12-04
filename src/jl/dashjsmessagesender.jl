@@ -9,7 +9,7 @@ A DashJSMessageSender component.
 
 Keyword arguments:
 - `id` (String; optional)
-- `data` (Dict; required)
+- `data` (Dict; optional)
 - `origin` (String; optional)
 - `target` (String; optional)
 """
