@@ -1,12 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import jsonLogic from 'json-logic-js';
 
 const DashJSMessageReceiver = (props) => {
-    const {id, setProps} = props;
+    const {id, conditions, setProps} = props;
+
+    const evaluateCondition = (data) => {
+        if (!condition) return true;
+        return jsonLogic.apply(conditions, data);
+    };
 
     useEffect(() => {
         const onMessage = (e) => {
-            setProps({data: e.data});
+            if (evaluateCondition(e.data)) {
+                setProps({data: e.data});
+            }
         };
 
         window.addEventListener('message', onMessage);
@@ -21,6 +29,7 @@ DashJSMessageReceiver.defaultProps = {};
 DashJSMessageReceiver.propTypes = {
     id: PropTypes.string,
     data: PropTypes.object,
+    conditions: PropTypes.object,
     setProps: PropTypes.func,
 };
 

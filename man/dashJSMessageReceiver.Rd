@@ -10,11 +10,13 @@
 }
 
 \usage{
-dashJSMessageReceiver(id=NULL, data=NULL)
+dashJSMessageReceiver(id=NULL, conditions=NULL, data=NULL)
 }
 
 \arguments{
 \item{id}{Character. }
+
+\item{conditions}{Named list. }
 
 \item{data}{Named list. }
 }

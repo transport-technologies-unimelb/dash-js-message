@@ -18,6 +18,13 @@
         "required": false,
         "description": ""
       },
+      "conditions": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": ""
+      },
       "setProps": {
         "type": {
           "name": "func"
