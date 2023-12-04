@@ -1,9 +1,9 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
 #' @export
-dashJSMessageSender <- function(id=NULL, label=NULL, value=NULL) {
+dashJSMessageSender <- function(id=NULL, data=NULL, origin=NULL, target=NULL) {
     
-    props <- list(id=id, label=label, value=value)
+    props <- list(id=id, data=data, origin=origin, target=target)
     if (length(props) > 0) {
         props <- props[!vapply(props, is.null, logical(1))]
     }
@@ -11,7 +11,7 @@ dashJSMessageSender <- function(id=NULL, label=NULL, value=NULL) {
         props = props,
         type = 'DashJSMessageSender',
         namespace = 'dash_js_message',
-        propNames = c('id', 'label', 'value'),
+        propNames = c('id', 'data', 'origin', 'target'),
         package = 'dashJsMessage'
         )
 

@@ -1,0 +1,72 @@
+{
+  "src/lib/components/DashJSMessageReceiver.react.js": {
+    "description": "",
+    "displayName": "DashJSMessageReceiver",
+    "methods": [],
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": ""
+      },
+      "data": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": ""
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": ""
+      }
+    }
+  },
+  "src/lib/components/DashJSMessageSender.react.js": {
+    "description": "",
+    "displayName": "DashJSMessageSender",
+    "methods": [],
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": ""
+      },
+      "target": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": ""
+      },
+      "origin": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": ""
+      },
+      "data": {
+        "type": {
+          "name": "object"
+        },
+        "required": true,
+        "description": ""
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": ""
+      }
+    }
+  }
+}
