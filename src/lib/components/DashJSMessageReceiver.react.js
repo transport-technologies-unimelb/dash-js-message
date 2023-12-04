@@ -6,7 +6,7 @@ const DashJSMessageReceiver = (props) => {
     const {id, conditions, setProps} = props;
 
     const evaluateCondition = (data) => {
-        if (!condition) return true;
+        if (!conditions) return true;
         return jsonLogic.apply(conditions, data);
     };
 
